@@ -1,0 +1,32 @@
+.product-card-container {
+  width: 98%;
+  height: 50px;
+  padding: 10px;
+  border: 2px solid slategray;
+  border-radius: 5px;
+  background-color: #f2f3f3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  text-align: left;
+  color: #333333;
+  font-size: 16px;
+  font-family: "Times New Roman", Times, serif;
+  margin: 5px;
+}
+
+.product-id {
+  width: 50px;
+}
+
+.product-title {
+  flex: 1;
+  text-align: left;
+}
+
+.product-price {
+  width: 60px;
+  text-align: left;
+  margin-right: 20px;
+}
