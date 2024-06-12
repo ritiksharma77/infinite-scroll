@@ -6,10 +6,10 @@ import { fetchData } from "./components/fetch-data";
 function App() {
   const scrollableDivRef = useRef<any>(null);
   const [data, setData] = useState<any>([]);
-  const [pagination, setPagination] = useState<any>({ page: 1, limit: 20 });
+  const [pagination, setPagination] = useState({ page: 1 });
+
   useEffect(() => {
-    fetchData(pagination).then((resultData: any) => {
-      console.log("resultData", resultData);
+    fetchData(pagination.page).then((resultData: any) => {
       if (resultData.length > 0) {
         const updatedData = [...data, ...resultData];
         setData(updatedData);
@@ -25,20 +25,20 @@ function App() {
     ) {
       setPagination({
         page: pagination.page + 1,
-        limit: 20,
       });
     }
   };
 
   return (
     <div className="App" ref={scrollableDivRef} onScroll={loadMore}>
+      <ProductCard key={99999} id="ID" title="TITLE" pageNumber="Page Number" />
       {data &&
         Array.from(data).map((item: any) => (
           <ProductCard
             key={item.id}
             id={item.id}
             title={item.title}
-            price={item.userId}
+            pageNumber={item.userId}
           />
         ))}
     </div>
