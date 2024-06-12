@@ -19,3 +19,6 @@ or
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+### UI
+![image](https://github.com/ritiksharma77/infinite-scroll/assets/73707093/ad34bd65-e946-43a6-a443-779126bdc068)
